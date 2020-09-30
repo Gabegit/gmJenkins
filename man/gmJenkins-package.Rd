@@ -12,7 +12,7 @@
   \item{read_para}{a vector of real parameters you want to test}
 }
 \value{
-  \code{gen_demo_data()} enenate a list of data with missing observation.
+  \code{gen_demo_data()} genenate a list of data with missing observation to demo.
 
   \code{jenkins_main()} Estimate jenkins' models using Xun's MLE approach.
 
@@ -27,11 +27,10 @@
 \details{
 
 The DESCRIPTION file:
-\packageDESCRIPTION{gmJenkins}
-\packageIndices{gmJenkins}
- First using \code{gen_demo_data()} function to generate a list data including initial parameter \code{b} and real data \code{input_data}.
 
- Then using \code{jenkins_main(b,b, data_list)} to estimate the model with maxLik, which will take a couple of minites, depending on the computer you use, such as about 7 mins in Macbook pro 2014.
+ First, using \code{gen_demo_data()} function to generate a list data including initial parameter \code{b} and real data \code{input_data}. Of course, you can use your own data as the argments of the function \code{jenkins_main(b, data_list)}.
+
+ Then, using \code{jenkins_main(b,b, data_list)} to estimate the model with maxLik, which will take a couple of minites, depending on the computer you use, such as about 7 mins in my Macbook pro 2014.
 }
 \author{
 \packageAuthor{gmJenkins}
