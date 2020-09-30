@@ -1,0 +1,13 @@
+Package: gmJenkins
+Type: Package
+Title: Estimate Jenkins models with Xun's MLE
+Version: 1.1
+Date: 2020-09-30
+Author: Li & Xun
+Maintainer: Gabe Li <liguomin@jxufe.edu.cn>
+Description: Estimate Jenkins models with Xun's MLE.
+License: GPL 3.0
+Imports: Rcpp (>= 1.0.5)
+LinkingTo: Rcpp, RcppArmadillo
+RoxygenNote: 7.1.1
+Encoding:UTF-8

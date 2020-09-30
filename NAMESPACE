@@ -1,0 +1,5 @@
+useDynLib(gmJenkins, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+importFrom("stats", "binomial", "coef", "glm", "pnorm", "quantile",
+               "rnorm", "runif")
+exportPattern("^[[:alpha:]]+")
