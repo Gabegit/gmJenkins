@@ -30,7 +30,7 @@ The DESCRIPTION file:
 
  First, using \code{gen_demo_data()} function to generate a list data including initial parameter \code{b} and real data \code{input_data}. Of course, you can use your own data as the argments of the function \code{jenkins_main(b, data_list)}.
 
- Then, using \code{jenkins_main(b,b, data_list)} to estimate the model with maxLik, which will take a couple of minites, depending on the computer you use, such as about 7 mins in my Macbook pro 2014.
+ Then, using \code{jenkins_main(b,b, data_list)} to estimate the model with maxLik, which will take a couple of minutes, which depends on the computer performance you use, such as about 7 mins in my Macbook pro 2014.
 }
 \author{
 \packageAuthor{gmJenkins}
@@ -38,7 +38,7 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{gmJenkins}
 }
 \references{
-~~ Literature or other references for background information ~~
+~~Jenkins et al.(2004), Xun et al.(2020) ~~
 }
 
 \examples{
