@@ -5,7 +5,7 @@
 #' @param T: time periods
 #' @param K: something you know
 #' @param rho1,rho2,sigu2,zeta: parameters you give to test
-#' @param pesudo: control the random vector for xi list.If pesudo=FALSE(default), xi is created by runif(),and if pesudo = TRUE, xi is created by randtoolbox::halton().
+#' @param pesudo: control the random vector for xi list.If pesudo=FALSE(default), xi is created by randtoolbox::halton(),and if pesudo = TRUE,xi is created by runif()changeccccccccccccs .
 #' @return a list:
 #' @param rho1,rho2,sigu2,zeta: parameters you give to test
 #' @return list$b is a initial parameter vector;
