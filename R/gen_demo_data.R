@@ -5,7 +5,9 @@
 #' @param T: time periods
 #' @param K: something you know
 #' @param rho1,rho2,sigu2,zeta: parameters you give to test
+#' @param pesudo: control the random vector for xi list.If pesudo=FALSE(default), xi is created by runif(),and if pesudo = TRUE, xi is created by randtoolbox::halton().
 #' @return a list:
+#' @param rho1,rho2,sigu2,zeta: parameters you give to test
 #' @return list$b is a initial parameter vector;
 #' @return list$data is a list: data.frame X, Y with missing data, K1, K2,T = T,D xi,R,N.
 #' @return list$real_para is a vector of the real paramaters.
@@ -18,7 +20,7 @@
 
 gen_demo_data = function(N = 20000, R = 50, T = 5,K = 5,
                          rho1 = -0.3, rho2 = 0.4, sigu2 = 0.6,
-                         zeta = 0.4 ){
+                         zeta = 0.4,pesudo =FALSE){
   suppressWarnings(suppressPackageStartupMessages({
     library(MASS)
     library(stats)
@@ -123,11 +125,19 @@ gen_demo_data = function(N = 20000, R = 50, T = 5,K = 5,
   D = 1 - is.na(Y[, -1])
 
   ###################model###############
-
-  xi = list()
+xi = list()
+  ## update in 2020.10.27
+  xi_list <- randtoolbox::halton(R, 2*(T)-1)
   for (i in 1:(2 * (T) - 1)) {
-    xi[[i]] = runif(R)
+    if (pesudo == TRUE) {
+      xi[[i]] = runif(R)
+    }
+    else  {
+      xi[[i]] <- xi_list[,i]
+    }
   }
+  
+
   Oprobit1 = MASS::polr(as.factor(Y[, 1]) ~ X[1:N, ],
                   , method = "probit")
   #summary(Oprobit1)
